@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>420 FLIP CARD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <img src="./420 Image/OG KUSH 1.png"  id="frontImg" alt="">
+            <img src="./420 Image/OG KUSH 2.png"  id="backImg" alt="">
+
+            <div class="product-Inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>KUSH</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>White Label Seeds</p>
+                        <h2>1 Single Feminized Seed</h2>
+                        <h1><span>£</span>8.70</h1>
+                        <button type="button">Add To Cart</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="./420 Image/OG KUSH 1.png" style="width: 40px; height: 50px;" alt="">
+                            </div>
+                            <div class="select-item">
+                                <img src="./420 Image/OG KUSH 2.png" style="width: 40px; height: 50px;" onclick="flipRight()" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>KUSH</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Indica Dominant Hybrid</p>
+                        <h2>60% Indica / 40% Sativa</h2>
+                        <h1><span>£</span>11.00</h1>
+                        <button type="button">Add To Cart</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="./420 Image/OG KUSH 1.png" style="width: 40px; height: 50px;" onclick="flipLeft()" alt="">
+                            </div>
+                            <div class="select-item">
+                                <img src="./420 Image/OG KUSH 2.png" style="width: 40px; height: 50px;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-left"></div>
+                <div class="product-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE WILL EMBED THE JS ELEMENT -->
+
+    <script>
+        var productBox = document.getElementById("productBox");
+        var frontImg = document.getElementById("frontImg");
+        var backImg = document.getElementById("backImg");
+
+        function flipRight(){
+            productBox.style.transform = "rotateY(180deg)";
+            frontImg.style.left = "650px";
+            backImg.style.left = "20px";
+            frontImg.style.transform = "rotate(-30deg)";
+            backImg.style.transform = "rotate(0deg)";
+        }
+        function flipLeft(){
+            productBox.style.transform = "rotateY(0deg)";
+            frontImg.style.left = "20px";
+            backImg.style.left = "-650px";
+            frontImg.style.transform = "rotate(0deg)";
+            backImg.style.transform = "rotate(-30deg)";
+
+        }
+    </script>
+</body>
+</html>
